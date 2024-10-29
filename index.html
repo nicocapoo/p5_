@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smile Face Drawing</title>
+</head>
+<body>
+    
+    <script src="p5.min.js"></script>
+
+    <script>
+        function setup(){
+            createCanvas(500, 500);
+            background("red");
+            angleMode(DEGREES);
+            strokeWeight(3);
+        }
+
+        function draw() {
+            fill("yellow");
+            stroke("black");
+            circle(250, 250, 300); // cerchio grande per il volto
+            
+            fill("white");
+            circle(200, 150, 50); // occhio sinistro
+            circle(300, 150, 50); // occhio destro
+            
+            fill("black");
+            circle(200, 150, 25); // pupilla sinistra
+            circle(300, 150, 25); // pupilla destra
+            
+            noFill();
+            arc(250, 280, 150, 150, 0, 180); // sorriso
+        }
+    </script>
+</body>
+</html>
